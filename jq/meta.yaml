@@ -19,6 +19,6 @@ test:
     -
 
 about:
-  home:
-  license:
-  license_file:
+  home: https://github.com/gcomoretto/jq
+  license: MIT
+  license_file: LICENSE
