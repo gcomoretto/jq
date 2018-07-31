@@ -12,6 +12,7 @@ requirements:
     - setuptools
     - setuptools_scm
     - requests
+    - pytest-runner
 
   run:
     - python
@@ -21,7 +22,6 @@ test:
     - pytest
     - pytest-flake8
     - responses
-    - pytest-runner
 
 about:
   home: https://github.com/gcomoretto/jq
