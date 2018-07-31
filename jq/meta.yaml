@@ -10,13 +10,18 @@ requirements:
   host:
     - python
     - setuptools
+    - requests
 
   run:
     - python
 
 test:
   imports:
-    -
+    - pytest
+    - pytest-flake8
+    - responses
+    - pytest-runner
+    - setuptools_scm
 
 about:
   home: https://github.com/gcomoretto/jq
