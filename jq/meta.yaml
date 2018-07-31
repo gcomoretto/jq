@@ -17,6 +17,8 @@ requirements:
 test:
   imports:
     - pytest
+    - pytest-flake8
+    - responses
 
 about:
   home:
