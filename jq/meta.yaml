@@ -1,6 +1,6 @@
 package:
   name: jq
-  version: 0.0.1
+  version: "0.0.1"
 
 source:
   git_rev: 
@@ -9,19 +9,15 @@ source:
 requirements:
   host:
     - python
-    - setuptools
-    - setuptools_scm
     - requests
-    - pytest-runner
+    - arrow
+    - beautifulsoup4
+    - Jinja2
+    - MarkupSafe    
+    - pyandoc
 
   run:
     - python
-
-test:
-  imports:
-    - pytest
-    - pytest-flake8
-    - responses
 
 about:
   home: https://github.com/gcomoretto/jq
