@@ -7,7 +7,7 @@ source:
 
 build:
   entry_points:
-    - testspecgen = jq.cli.testspecgen:main
+    - jq = jq:main
 
 requirements:
   build:

@@ -11,22 +11,19 @@ AUTHOR_EMAIL = 'gcomoretto@lsst.org'
 URL = 'https://github.com/gcomoretto/jq'
 LICENSE = 'MIT'
 
-
-def read(filename):
-    """Convenience function for includes"""
-    full_filename = os.path.join(
-        os.path.abspath(os.path.dirname(__file__)),
-        filename)
-    return codecs.open(full_filename, 'r', 'utf-8').read()
-
-
-long_description = read('README.md')  # pylint:disable=invalid-name
+requires = [
+    'requests',
+    'pyandoc',
+    'arrow',
+    'jinja2',
+    'click',
+    'BeautifulSoup4'
+]
 
 
 setup(
     name=PACKAGENAME,
     description=DESCRIPTION,
-    long_description=long_description,
     url=URL,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
@@ -39,15 +36,9 @@ setup(
     keywords='lsst',
     use_scm_version=False,
     packages=find_packages(exclude=['docs', 'tests*']),
-    install_requires=[
-        'requests>=2.8.1,<3.0.0',
-    ],
-    setup_requires=[
-        'setuptools_scm',
-    ],
     entry_points={
         'console_scripts': [
-            'testspecgen = jq.cli.testspecgen:main',
+            'jq = jq:main',
         ]
     }
 )
