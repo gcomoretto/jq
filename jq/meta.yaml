@@ -1,13 +1,19 @@
 package:
   name: jq
-  version: "0.0.1"
+  version: 0.0.1
 
 source:
-  git_rev: 
-  git_url: https://github.com/gcomoretto/jq
+  path: ..
+
+build:
+  entry_points:
+    - testspecgen = jq.cli.testspecgen:main
 
 requirements:
-  host:
+  build:
+    - python
+
+  run:
     - python
     - requests
     - arrow
@@ -15,9 +21,6 @@ requirements:
     - Jinja2
     - MarkupSafe    
     - pyandoc
-
-  run:
-    - python
 
 about:
   home: https://github.com/gcomoretto/jq

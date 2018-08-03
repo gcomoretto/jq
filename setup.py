@@ -37,7 +37,7 @@ setup(
         'License :: OSI Approved :: MIT License',
     ],
     keywords='lsst',
-    use_scm_version=True,
+    use_scm_version=False,
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=[
         'requests>=2.8.1,<3.0.0',
@@ -45,7 +45,6 @@ setup(
     setup_requires=[
         'setuptools_scm',
     ],
-    # package_data={},
     entry_points={
         'console_scripts': [
             'testspecgen = jq.cli.testspecgen:main',

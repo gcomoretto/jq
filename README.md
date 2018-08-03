@@ -1,1 +1,2 @@
-# jq
+Jira Query Package
+
